@@ -3,139 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Payment</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../styles/orderconfirmation.css" />
     <style>
-        /* #part1 {
+      /* #part1 {
   background-color: yellow;
-} */
+} */    
+      #part1 > div {
+        margin: auto;
+        width: 50%;
+        /* border: solid black; */
+        padding: 10px;
+      }
+      #part3 > div {
+        margin: auto;
+        width: 50%;
 
-* {
-  font-family: interregular, sans-serif, monospace, arial, helvetica neue,
-    helvetica, arial, geneva, times new roman;
-  font-weight: 500;
-  letter-spacing: 0.2px;
-  /* border: 1px solid black; */
-  font-size: 18px;
-}
+        padding: 10px;
+      }
+      #part3 {
+        height: 180px;
+        background-color: #82b5d5;
+      }
+      #part3 h1 {
+        color: black;
+      }
+      #part2 {
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+        width: 50%;
 
-#part1 > div {
-  margin: auto;
-  width: 50%;
-  /* border: solid black; */
-  padding: 10px;
-}
-#part3 > div {
-  margin: auto;
-  width: 50%;
-  padding: 10px;
-}
-#part3 {
-  background-color: black;
-}
-#part3 h1 {
-  color: whitesmoke;
-}
-#part2 {
-  display: flex;
-  justify-content: space-around;
-  margin: auto;
-  width: 50%;
+        padding: 10px;
+      }
+      #part2 > div {
+        width: 50%;
 
-  padding: 10px;
-}
-#part2 > div {
-  width: 50%;
-
-  padding: 10px;
-}
-
-#part2 > div:nth-of-type(2) p {
-  text-align: left;
-}
-
-#part2 > div > div p {
-  margin-top: 0;
-}
-#part1 > div > img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-h1,
-p,
-h3 {
-  text-align: center;
-}
-h3 {
-  line-height: 20px;
-}
-button {
-  display: flex;
-  justify-content: center;
-  background-color: #898989;
-  border: none;
-  height: 8%;
-  margin: auto;
-  border-radius: 6px;
-}
-button > h2 {
-  color: black;
-  line-height: 8%;
-  text-align: center;
-}
-button:hover {
-  background-color: #f6f2e3;
-}
-
-.timer {
-  font-size: 20px;
-}
-
-#part2 p {
-  text-align: left;
-  padding-left: 20px;
-  font-size: 20px;
-}
-
-#part2 div {
-  width: 90%;
-}
-
-span#name {
-  font-weight: bold;
-}
-
-h3 {
-  background-color: #f4dd82;
-  padding: 8px;
-  border-radius: 10px;
-}
-
-@media only screen and (max-width: 800px) {
-  #part2 {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
+        padding: 10px;
+      }
+      #part2 > div h3 {
+        background-color: #82b5d5;
+      }
+      #part2 > div > div {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 0;
+      }
+      #part2 > div > div p {
+        margin-top: 0;
+      }
+      #part1 > div > img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+      h1,
+      p,
+      h3 {
+        text-align: center;
+      }
+      h3 {
+        line-height: 20px;
+      }
+      button {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.361);
+        border: none;
+        height: 50px;
+        align-items: center;
+        margin: auto;
+        border-radius: 6px;
+      }
+      button > h2 {
+        color: black;
+        
+      }
+      /* button:hover {
+        background-color: #82b5d5;
+      } */
+      @media only screen and (max-width: 800px) {
+        #part2 {
+          display: flex;
+          flex-direction: column;
+        }
+      }
     </style>
   </head>
   <body>
     <div id="parent">
       <div id="part1">
         <div>
-          <img
-            src="https://media.istockphoto.com/id/1034249292/photo/set-of-car-parts-isolated-on-white-background-3d.jpg?s=612x612&w=0&k=20&c=BwXl3LzQau4v40nl9INYToE0mC1SYDA4gBkylspbYis="
-            alt=""
-            style="mix-blend-mode: darken"
-          />
+          <img src="https://shorturl.at/fjrI9" alt="" />
           <h1>Thank You For Your Order!</h1>
           <p>
-            Good news,<span id="name"> ${data.address.fullname} !</span> A
-            shipment from <br />
+            Good news,<span id="name"></span>! A shipment from <br />
             our company is headed your way
           </p>
         </div>
@@ -143,56 +106,56 @@ h3 {
       <div id="part2">
         <div>
           <h3>SHIPPING ADDRESS:</h3>
-          <p id="address">${data.address.full_address}</p>
+          <p id="address">
+            675 Massachusetts Avenue 11th Floor Cambridge, MA 02139
+          </p>
         </div>
         <div>
           <h3>SUMMARY:</h3>
           <div>
-            <p>Payment id: <span id="totalprice">0</span></p>
+            <p>Order #:</p>
             <p></p>
-            <p>Order Total: <span id="orderno">0</span></p>
+            <p id="orderno"></p>
+          </div>
+          <div>
+            <p>Order Total:</p>
             <p></p>
+            <p id="totalprice"></p>
           </div>
         </div>
       </div>
-      <p id="timer" class="timer"></p>
+      <div id="part3">
+        <div>
+          <h1>Get 30% off your next order.</h1>
+          <button id="shopagain"><h2>Shop Again</h2></button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
-<script type="module">
-  import API from "/components/api.js";
+<script>
   async function getdata() {
     try {
       let response = await fetch(
-        `${API}/users/${localStorage.getItem("userid") || 1}`
+        "https://dark-gold-meerkat-shoe.cyclic.cloud/users/1"
       );
       let data = await response.json();
-      console.log(data);
-      var amount = localStorage.getItem("Total_Amount");
+
       document.querySelector(
         "#address"
       ).innerText = `${data.address.full_address} \n  ${data.address.state} ${data.address.pin_code}`;
+      document.querySelector("#totalprice").innerText = `₹2020`;
       document.querySelector("#name").innerText = data.address.fullname;
       document.querySelector("#orderno").innerText = Math.round(
         Math.random() * 100000
       );
-
-      let count = 8;
-      let interval = setInterval(() => {
-        count--;
-        document.querySelector(
-          "#timer"
-        ).innerText = `Redirecting in ${count} sec`;
-        if (count < 0) {
-          window.location.assign("/index.html");
-        }
-      }, 1000);
     } catch (error) {
       console.log(error);
     }
   }
-  document.querySelector("#totalprice").innerText = "2020";
-  window.onload = () => {
-    getdata();
-  };
+  getdata();
+
+  document.querySelector("#shopagain").addEventListener("click", function () {
+    location.href = "./index.html";
+  });
 </script>

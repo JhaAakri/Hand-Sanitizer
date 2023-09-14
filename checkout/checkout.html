@@ -254,7 +254,7 @@
     handler: function (response) {
       console.log(response);
       localStorage.setItem("txn_id", response.razorpay_payment_id);
-      location.href = "./orderconfirmation.html";
+      location.href = "./confirmation.html";
     },
   };
   var rzp1 = new Razorpay(options);
