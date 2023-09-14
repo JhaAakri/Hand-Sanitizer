@@ -23,10 +23,10 @@
       }
       #part3 {
         height: 180px;
-        background-color: #82b5d5;
+        background-color: #f18a74;
       }
       #part3 h1 {
-        color: black;
+        color: white;
       }
       #part2 {
         display: flex;
@@ -42,7 +42,8 @@
         padding: 10px;
       }
       #part2 > div h3 {
-        background-color: #82b5d5;
+        background-color: #f18a74;
+        color: white;
       }
       #part2 > div > div {
         display: flex;
@@ -78,7 +79,7 @@
         border-radius: 6px;
       }
       button > h2 {
-        color: black;
+        color: white;
         
       }
       #timer{
@@ -146,7 +147,7 @@
         "https://dark-gold-meerkat-shoe.cyclic.cloud/users/1"
       );
       let data = await response.json();
-
+       console.log(data);
       document.querySelector(
         "#address"
       ).innerText = `${data.address.full_address} \n  ${data.address.state} ${data.address.pin_code}`;

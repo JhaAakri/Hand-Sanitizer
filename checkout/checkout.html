@@ -8,7 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css "
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles/checkout.css" />
+    <link rel="stylesheet" href="../style/checkout.css" />
     <link rel="stylesheet" href="../styles/navbar.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
     <style>
@@ -54,13 +54,14 @@
       }
       .heding {
         height: 50px;
-        background-color: #82b5d5;
+        background-color: #f18a74;
         text-align: center;
         font-family: Helvetica, Arial, sans-serif;
         border-radius: 8px;
       }
       h2 {
         padding: 10px;
+        color: white;
       }
 
       #error {
@@ -77,7 +78,7 @@
         padding: 20px;
       }
       form input:focus {
-        outline: solid #82b5d5;
+        outline: solid #f18a74;
       }
       #paymentdetails {
         width: 40%;
@@ -93,7 +94,7 @@
       #orderBtn {
         width: 60%;
         margin: auto;
-        background-color: #82b5d5;
+        background-color: #f18a74;
         border: none;
         height: 50px;
         font-weight: 700;
@@ -278,6 +279,39 @@
     }
   };
 
+  async function postdata() {
+    // let name = document.querySelector("#name").value;
+    // let phoneno = document.querySelector("#phoneno").value;
+    // let address = document.querySelector("#fulladdress").value;
+    // let town = document.querySelector("#town").value;
+    // let distric = document.querySelector("#distric").value;
+    // let pincode = document.querySelector("#pincode").value;
+    // let state = document.querySelector("#state").value;
+    let obj = {
+      fullname: "",
+      mobile_no: "",
+      full_address: "",
+      locality: "",
+      district: "",
+      pin_code: "",
+      state: "",
+    };
+    try {
+      let response = await fetch(`https://successful-ruby-eel.cyclic.cloud/address`, {
+        method: "POST",
+        body: JSON.stringify({ address: obj }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      let data=await response.json();
+
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  postdata()
   async function savedata() {
     let name = document.querySelector("#name").value;
     let phoneno = document.querySelector("#phoneno").value;
@@ -296,12 +330,7 @@
       state: state,
     };
     try {
-      let response = await fetch(
-        `${API}/users/${localStorage.getItem("userid") || 1}`
-      );
-      let data = await response.json();
-      let object = data.address;
-      fetch(`${API}/users/${localStorage.getItem("userid") || 1}`, {
+      let response = await fetch(`https://successful-ruby-eel.cyclic.cloud/address`, {
         method: "PATCH",
         body: JSON.stringify({ address: obj }),
         headers: {
