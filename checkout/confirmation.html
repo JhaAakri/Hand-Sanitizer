@@ -56,6 +56,7 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: -50px;
         width: 50%;
       }
       h1,
@@ -80,6 +81,10 @@
         color: black;
         
       }
+      #timer{
+        margin-top: -0.5%;
+        margin-bottom: -0.5%;
+      }
       /* button:hover {
         background-color: #82b5d5;
       } */
@@ -95,7 +100,7 @@
     <div id="parent">
       <div id="part1">
         <div>
-          <img src="https://shorturl.at/fjrI9" alt="" />
+          <img src="https://cdni.iconscout.com/illustration/premium/thumb/woman-getting-order-confirmation-message-4468554-3718554.png" alt="" />
           <h1>Thank You For Your Order!</h1>
           <p>
             Good news,<span id="name"></span>! A shipment from <br />
@@ -103,6 +108,7 @@
           </p>
         </div>
       </div>
+      <p id="timer" class="timer"></p>
       <div id="part2">
         <div>
           <h3>SHIPPING ADDRESS:</h3>
@@ -154,7 +160,17 @@
     }
   }
   getdata();
-
+  let count = 12;
+      let interval = setInterval(() => {
+          document.querySelector(
+            "#timer"
+          ).innerText = `Redirecting in ${count} sec`;
+        count--;
+        if (count < 0) {
+        //   window.location.assign("/index.html");
+          clearInterval(interval);
+        }
+      }, 1000);
   document.querySelector("#shopagain").addEventListener("click", function () {
     location.href = "./index.html";
   });
