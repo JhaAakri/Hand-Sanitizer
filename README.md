@@ -1,3 +1,5 @@
 
 Tech Stack 💻
-C:\Users\dell\Desktop\Hand-Sanitizer\tech\css.png
+![HTML5](html.jpeg)
+![CSS3](css.png)
+![Local Storage](ls.jpeg)
