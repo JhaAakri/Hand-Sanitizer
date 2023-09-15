@@ -10,9 +10,11 @@ https://github.com/JhaAakri/Hand-Sanitizer.git
 In this project we have used the following technologies:
 <br>
 
-<img src="/tech/html.webp" alt="HTML" display="inline-block" width:="60" height= "50" margin-right="10px">
-<img src="/tech/css.webp" alt="CSS" display="inline-block" width:="60" height= "50" margin-right="10px">
-<img src="/tech/js.webp" alt="JavaScript" display="inline-block" width:="60" height= "50" margin-right="10px">
+<div style="display: flex; justify-content: space-between;">
+    <img src="/tech/html.webp" alt="HTML" width="60" height="60">
+    <img src="/tech/css.webp" alt="CSS" width="60" height="60">
+    <img src="/tech/js.webp" alt="JavaScript" width="60" height="60">
+</div>
 
 
 Along with that, in order to store user data and products data we also used LocalStorage (aka browser storage).
