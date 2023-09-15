@@ -4,98 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../styles/orderconfirmation.css" />
-    <style>
-      /* #part1 {
-  background-color: yellow;
-} */    
-      #part1 > div {
-        margin: auto;
-        width: 50%;
-        /* border: solid black; */
-        padding: 10px;
-      }
-      #part3 > div {
-        margin: auto;
-        width: 50%;
-
-        padding: 10px;
-      }
-      #part3 {
-        height: 180px;
-        background-color: #f18a74;
-      }
-      #part3 h1 {
-        color: white;
-      }
-      #part2 {
-        display: flex;
-        justify-content: space-around;
-        margin: auto;
-        width: 50%;
-
-        padding: 10px;
-      }
-      #part2 > div {
-        width: 50%;
-
-        padding: 10px;
-      }
-      #part2 > div h3 {
-        background-color: #f18a74;
-        color: white;
-      }
-      #part2 > div > div {
-        display: flex;
-        justify-content: space-evenly;
-        padding-top: 0;
-      }
-      #part2 > div > div p {
-        margin-top: 0;
-      }
-      #part1 > div > img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: -50px;
-        width: 50%;
-      }
-      h1,
-      p,
-      h3 {
-        text-align: center;
-      }
-      h3 {
-        line-height: 20px;
-      }
-      button {
-        display: flex;
-        justify-content: center;
-        background-color: rgba(255, 255, 255, 0.361);
-        border: none;
-        height: 50px;
-        align-items: center;
-        margin: auto;
-        border-radius: 6px;
-      }
-      button > h2 {
-        color: white;
-        
-      }
-      #timer{
-        margin-top: -0.5%;
-        margin-bottom: -0.5%;
-      }
-      /* button:hover {
-        background-color: #82b5d5;
-      } */
-      @media only screen and (max-width: 800px) {
-        #part2 {
-          display: flex;
-          flex-direction: column;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./style/confirmation.css" />
   </head>
   <body>
     <div id="parent">
@@ -104,33 +13,38 @@
           <img src="https://cdni.iconscout.com/illustration/premium/thumb/woman-getting-order-confirmation-message-4468554-3718554.png" alt="" />
           <h1>Thank You For Your Order!</h1>
           <p>
-            Good news,<span id="name"></span>! A shipment from <br />
+            Good news, <span id="name"></span>! A shipment from <br />
             our company is headed your way
           </p>
         </div>
       </div>
-      <p id="timer" class="timer"></p>
       <div id="part2">
         <div>
-          <h3>SHIPPING ADDRESS:</h3>
-          <p id="address">
-            675 Massachusetts Avenue 11th Floor Cambridge, MA 02139
-          </p>
+          <div id="heding" style="margin-top: -8.5%;">
+            <h3 >SHIPPING ADDRESS:</h3>
+          </div>
+          <div id="addressdiv">
+            <p id="address" style="width: 100%;">
+            </p>
+          </div>
         </div>
         <div>
-          <h3>SUMMARY:</h3>
-          <div>
+          <div id="heding">
+            <h3>SUMMARY:</h3>
+          </div>
+          <div id="ordernodiv">
             <p>Order #:</p>
-            <p></p>
+            <!-- <p></p> -->
             <p id="orderno"></p>
           </div>
-          <div>
+          <div id="totalpricediv">
             <p>Order Total:</p>
             <p></p>
             <p id="totalprice"></p>
           </div>
         </div>
       </div>
+      <p id="timer" class="timer"></p>
       <div id="part3">
         <div>
           <h1>Get 30% off your next order.</h1>
@@ -139,28 +53,28 @@
       </div>
     </div>
   </body>
-</html>
-<script>
-  async function getdata() {
+  </html>
+  <script>
+    async function getdata() {
     try {
       let response = await fetch(
-        "https://dark-gold-meerkat-shoe.cyclic.cloud/users/1"
+        "https://successful-ruby-eel.cyclic.cloud/address/1"
       );
       let data = await response.json();
        console.log(data);
       document.querySelector(
         "#address"
-      ).innerText = `${data.address.full_address} \n  ${data.address.state} ${data.address.pin_code}`;
-      document.querySelector("#totalprice").innerText = `₹2020`;
-      document.querySelector("#name").innerText = data.address.fullname;
-      document.querySelector("#orderno").innerText = Math.round(
-        Math.random() * 100000
-      );
+      ).innerText = `${data.full_address} ${data.state} ${data.pin_code}`;
+      document.querySelector("#name").innerText = data.fullname;
     } catch (error) {
       console.log(error);
     }
   }
   getdata();
+  document.querySelector("#totalprice").innerText = `₹100`;
+  document.querySelector("#orderno").innerText = Math.round(
+    Math.random() * 1000000
+  );
   let count = 12;
       let interval = setInterval(() => {
           document.querySelector(
