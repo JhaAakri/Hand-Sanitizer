@@ -17,7 +17,6 @@ In this project we have used the following technologies:
           margin-right: 10px; 
         }
       </style>
-
 <img src="/tech/html.webp" alt="HTML" class="icon-img">
 <img src="/tech/css.webp" alt="CSS" class="icon-img">
 <img src="/tech/js.webp" alt="JavaScript" class="icon-img">
