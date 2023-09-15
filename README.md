@@ -8,23 +8,23 @@ https://github.com/JhaAakri/Hand-Sanitizer.git
 
 <h1>Tech Stack 💻</h1>
 In this project we have used the following technologies:
-
-HTML
-CSS
-JavaScript
+<br>
+HTML<br>
+CSS<br>
+JavaScript<br>
 Along with that, in order to store user data and products data we also used LocalStorage (aka browser storage).
 
 <h1>Description of Project.</h1>
 
 
 <h1>Team Members and Contributors :</h1>
-🔗<h2> Links</h2>
-Aakriti Jha
-Github : https://github.com/JhaAakri
-Ashish Roul
-Github : https://github.com/Ashishroul
-Ritesh Maurya
-Github : https://github.com/riteshmaurya089
+<h2>🔗 Links</h2>
+<b>Aakriti Jha<br>
+Github : https://github.com/JhaAakri<br>
+<b>Ashish Roul<br>
+Github : https://github.com/Ashishroul<br>
+<b>Ritesh Maurya<br>
+Github : https://github.com/riteshmaurya089<br>
 
 <b>Collaboration tools.
 Git and Github.
