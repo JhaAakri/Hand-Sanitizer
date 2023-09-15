@@ -9,9 +9,10 @@ https://github.com/JhaAakri/Hand-Sanitizer.git
 <h1>Tech Stack 💻</h1>
 In this project we have used the following technologies:
 <br>
-○ ![Alt text](/tech/html.webp)<br>
-○ ![CSS](/tech/css.webp)<br>
-○ ![JavaScript](/tech/js.webp)<br>
+<img src="/tech/html.webp" alt="HTML">
+<img src="/tech/css.webp" alt="CSS">
+<img src="/tech/js.webp" alt="JavaScript">
+
 Along with that, in order to store user data and products data we also used LocalStorage (aka browser storage).
 
 <h1>Description of Project.</h1>
