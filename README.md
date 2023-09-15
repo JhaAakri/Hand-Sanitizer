@@ -1,5 +1,5 @@
 
 Tech Stack 💻
-![HTML5](html.jpeg)
-![CSS3](css.png)
-![Local Storage](ls.jpeg)
+![HTML5](/tech/html.jpeg))
+![CSS3](/tech/css.png)
+![Local Storage](/tech/ls.jpegls.jpeg)
