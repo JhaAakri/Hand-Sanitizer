@@ -1,6 +1,6 @@
 <h2>A collaborative project from Masai school.</h2>
 
-In this project we have tried to make a look alike of given template of Hand Sanitizer website. With our efforts and the technology stack, that we have learned till now in Unit-5 in Masai School, we were able to clone with similar looks and features.
+In this project we have tried to make a look alike of given template of Hand Sanitizer website. With our efforts and the technology stack, that we have learned till now in Unit-5 in Masai School.
 
 <h1>Run Locally</h1>
 Clone the project
