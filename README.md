@@ -19,12 +19,13 @@ Along with that, in order to store user data and products data we also used Loca
 
 <h1>Team Members and Contributors :</h1>
 <h2>🔗 Links</h2>
-<b>Aakriti Jha<br>
+<b>Aakriti Jha</b><br>
 Github : https://github.com/JhaAakri<br>
-<b>Ashish Roul<br>
+<b>Ashish Roul</b><br>
 Github : https://github.com/Ashishroul<br>
-<b>Ritesh Maurya<br>
+<b>Ritesh Maurya</b><br>
 Github : https://github.com/riteshmaurya089<br>
+
 
 <b>Collaboration tools.
 Git and Github.
