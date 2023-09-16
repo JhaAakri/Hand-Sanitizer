@@ -89,7 +89,7 @@
 
         #imgPart-2 {
             position: absolute;
-            top: 37%;
+            top: 27%;
             left: 10%;
             color: aliceblue;
         }
@@ -271,22 +271,17 @@
             margin-bottom: 20px;
         }
 
-
-
-
-
         @media (max-width: 540px) {
-            #nav{
+
+            /* #nav{
                 display: none;
             }
             #footer{
                 display: none;
-            }
-            /* #container{
-                width: 85%;
             } */
-
-
+            /* #imgPart-2{
+                top: 37%;
+            } */
             #skinCareImage {
                 /* width: 300px; */
                 /* top: -100px; */
@@ -352,18 +347,9 @@
             .pagination {
                 margin-bottom: 20px;
             }
-
-            #main_nav{
-                width: 100%;
-            }
         }
 
-
-
         @media (max-width: 740px) {
-            #main_nav{
-                width: 100%;
-            }
             #skinCareImage {
                 /* width: 300px; */
                 /* top: -100px; */
@@ -429,36 +415,64 @@
             }
 
         }
-
-
-
-        /* footer Css */
-        /* footer css */
-
-
-        
-
-        /* navbar css */
-
-        
     </style>
 </head>
 
 <body>
     <div id="parent">
         <div id="nav">
-            
+            <header class="header">
+                <nav class="navbar">
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <ul class="nav-menu">
+                        <li class="nav-items">
+                            <a href="#" class="nav-links"><i class="fa-solid fa-bars"></i></a>
+                        </li>
+                        <li class="nav-items">
+                            <a href="#bestseller" class="nav-links">Best Sellers</a>
+                        </li>
+                        <li class="nav-items">
+                            <a href="#" class="nav-links">Hand Sanitizer</a>
+                        </li>
+                        <li class="nav-items">
+                            <a href="#" class="nav-links">Hand Cream</a>
+                        </li>
+                        <li class="nav-items">
+                            <a href="#" class="nav-links">Refills</a>
+                        </li>
+                        <li class="nav-items">
+                            <img id="logo-image" src="https://cdn.shopify.com/s/files/1/0511/9066/1293/files/logo_han.png?v=1651046048" alt="" />
+                        </li>
+                        <li class="nav-items">
+                            <a href="#" class="nav-links">Toothpaste</a>
+                        </li>
+                        <li class="nav-items">
+                            <a href="#" class="nav-links">Hand Soap</a>
+                        </li>
+                        <li class="nav-items">
+                            <a href="#" class="nav-links">Combos</a>
+                        </li>
+                    </ul>
+        
+                    <a class='nav-links logini' href='#'><i class="fa-regular fa-user"></i></a>
+                    <a class='nav-links' href='#'><i class="fa-solid fa-bag-shopping"></i></a>
+                </nav>
+            </header>
         </div>
         <div id="container">
             <p>Home > <span>Skin Care</span></p>
             <div id="mainImage">
                 <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Freepik - Flaticon</a> -->
                 <div id="imgPart-1">
-                    <img src="//haanready.com/cdn/shop/files/JJJJ.jpg?v=1666020661" id="skinCareImage" alt="">
+                    <img src="//haanready.com/cdn/shop/files/handcare.jpg?v=1661872588" id="skinCareImage" alt="">
                 </div>
                 <div id="imgPart-2">
-                    <h1>Skin Care</h1>
-                    <h3>The Ultimate path to radiant skin</h3>
+                    <h1>Hand Care</h1>
+                    <h3>Elevate your hand care game</h3>
                 </div>
                 <div id="imageDownText">
                     <p>
@@ -505,16 +519,16 @@
                         <div>
                             Category
                             <div>
-                                <input type="radio" id="faceCleanser">Face Cleanser (9)
+                                <input type="radio" id="HandCleanser">Hand Cleanser (9)
                             </div>
                             <div>
-                                <input type="radio" id="faceCream">Face Cream (9)
+                                <input type="radio" id="HandCream">Hand Cream (9)
                             </div>
                             <div>
-                                <input type="radio" id="faceSerum">Face Serum (9)
+                                <input type="radio" id="HandSerum">Hand Serum (9)
                             </div>
                             <div>
-                                <input type="radio" id="faceSPF">Face SPF (1)
+                                <input type="radio" id="HandSPF">Hand SPF (1)
                             </div>
                             <div>
                                 <input type="radio" id="skinCare">Skin Care (3)
@@ -602,7 +616,7 @@
             </div>
         </div>
         <div id="footer">
-            
+
         </div>
 </body>
 
@@ -621,7 +635,7 @@
         try {
             var searchInput = document.getElementById("search-inp").value;
             // var searchInput = "cream"
-            var res = await fetch(`https://gifted-spacesuit-mite.cyclic.cloud/skinCare?_page=${pageCount}&_limit=12`)
+            var res = await fetch(`https://gifted-spacesuit-mite.cyclic.cloud/handCare?_page=${pageCount}&_limit=8`)
             resData = await res.json();
             showData(resData);
         } catch (error) {
@@ -663,7 +677,6 @@
             // var searchInput = "cream"
             var res = await fetch(`https://gifted-spacesuit-mite.cyclic.cloud/skinCare?_page=${pageCount}&_limit=8&q=${searchInput}`)
             resData = await res.json();
-            // console.log(resData)
             showData(resData);
         } catch (error) {
             console.log(5);
@@ -678,11 +691,7 @@
             document.getElementById("products").append(h1);
         } else {
 
-            data.map((item, i) => {
-                if(item.id==1){
-                    return;
-                }
-                // console.log(item.id)
+            data.map((item) => {
                 var div = document.createElement("div");
                 div.setAttribute("class", "card");
 
@@ -693,7 +702,7 @@
                 var image = document.createElement("img")
                 image.setAttribute("src", item.image);
                 image.setAttribute("id", "product_image");
-                image.addEventListener("click", function(){
+                image.addEventListener("click", function () {
                     detailData(item);
                 })
 
@@ -752,14 +761,13 @@
     }
     let arr = JSON.parse(localStorage.getItem('productArr')) || [];
     let arr2 = JSON.parse(localStorage.getItem('wishlistArr')) || [];
-    let productDetailArr = [] || JSON.parse(localStorage.getItem('detailArr'));     ///maybe its nuseful
 
-    function detailData(item){
+    function detailData(item) {
         console.log(item);
         localStorage.setItem('detailData', JSON.stringify(item));
-        setTimeout(()=>{
+        setTimeout(() => {
             location.href = "HaanSanitizer/productDetails.html";
-        }, 1000);        
+        }, 1000);
     }
 
     function wishlistData(item) {
@@ -773,13 +781,13 @@
         console.log(item)
         arr.push(item);
         localStorage.setItem('productArr', JSON.stringify(arr));
-    }
         //     image2.classList.add("hidden");
         //     setTimeout(()=>{
         //         // image2.style.display = 'none';
         //         image2.classList.remove("hidden");
         //             console.log("perfectWorking")
         //     },10000);
+    }
     const filterDiv = document.getElementById("filterPart");
     const hiddenFilters = document.getElementById("filterHumberger");
     filterDiv.addEventListener('click', function () {
@@ -823,10 +831,10 @@
     });
 
     document.getElementById("filterBtn").addEventListener("click", applyFilter);
-    var faceCleanser = document.getElementById("faceCleanser");
-    var faceCream = document.getElementById("faceCream");
-    var faceSerum = document.getElementById("faceSerum");
-    var faceSPF = document.getElementById("faceSPF");
+    var HandCleanser = document.getElementById("HandCleanser");
+    var HandCream = document.getElementById("HandCream");
+    var HandSerum = document.getElementById("HandSerum");
+    var HandSPF = document.getElementById("HandSPF");
     var skinCare = document.getElementById("skinCare");
     var comboPack = document.getElementById("comboPack");
     var refilPack = document.getElementById("refilPack");
@@ -835,38 +843,38 @@
     var talesOfLotus = document.getElementById("talesOfLotus");
     function applyFilter() {
         let count = 0;
-        if (faceCleanser.checked) {
+        if (HandCleanser.checked) {
             count++;
             // console.log(resData)
             var filterData = resData.filter(data => {
-                const regex = /\bface cleanser\b/i;
+                const regex = /\bHand cleanser\b/i;
                 return regex.test(data.title);
             })
             showData(filterData);
             // console.log("cleanser")
         }
-        if (faceCream.checked) {
+        if (HandCream.checked) {
             count++;
             var filterData = resData.filter(data => {
-                const regex = /\bface cream\b/i;
+                const regex = /\bHand Cream\b/i;
                 return regex.test(data.title);
             })
             showData(filterData);
             // console.log("cream")
         }
-        if (faceSerum.checked) {
+        if (HandSerum.checked) {
             count++;
             var filterData = resData.filter(data => {
-                const regex = /\bface serum\b/i;
+                const regex = /\bHand serum\b/i;
                 return regex.test(data.title);
             })
             showData(filterData);
             // console.log("serum")
         }
-        if (faceSPF.checked) {
+        if (HandSPF.checked) {
             count++;
             var filterData = resData.filter(data => {
-                const regex = /\bface SPF\b/i;
+                const regex = /\bHand SPF\b/i;
                 return regex.test(data.title);
             })
             showData(filterData);
