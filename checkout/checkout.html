@@ -195,43 +195,17 @@
 
   //payment section
 
-  function update() {
+
     var sub_total = localStorage.getItem("Total_Amount");
     var total = parseInt(sub_total);
     console.log(total);
     let pay_data = document.getElementById("convinientfee").innerText=100;
-    // pay_data.innerHTML = null;
-    // pay_data.innerHTML = `
-    //   <div class="heding">
-    //     <h2><i class="fa-solid fa-wallet "></i>  PAYMENT</h2>
-    //   </div>
-            
-    //   <div>
-    //     <p>Subtotal</p>
-    //       <p>Rs.${100}</p>
-    //   </div>
-    //   <div>
-    //     <p>Convenience Fees</p>
-    //     <p id="convinientfee">Rs.99</p>
-    //   </div>
-    //   <hr />
-    //   <div>
-    //   <p>Total</p>
-    //     <p>Rs.${100}</p>
-    //   </div>
-    //   <div>
-    //     <button id="orderBtn"><h2>Place Order</h2></button>
-    //   </div>`;
-  }
-  update();
-
-  //rayzer pay
-  var sub_total = localStorage.getItem("Total_Amount");
-  var total = parseInt(sub_total);
+    let total = document.getElementById("total").innerText=total;
+    let subtotal = document.getElementById("subtotal").innerText=total;
 
   var options = {
     key: "rzp_test_y0dj0ip5NJmJJs", // Enter the Key ID generated from the Dashboard
-    amount: 100 * 100,
+    amount: total*100,
     currency: "INR",
     description: "Auto Part",
     image:
