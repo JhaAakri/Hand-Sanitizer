@@ -18,6 +18,7 @@
           </p>
         </div>
       </div>
+      <a href="/Hand-Sanitizer/checkout/checkout.html"></a>
       <div id="part2">
         <div>
           <div id="heding" style="margin-top: -8.5%;">
@@ -82,11 +83,11 @@
           ).innerText = `Redirecting in ${count} sec`;
         count--;
         if (count < 0) {
-        //   window.location.assign("/index.html");
-          clearInterval(interval);
+          location.href = "/Hand-Sanitizer/Hand_Sanitizer/index.html";
+          // clearInterval(interval);
         }
       }, 1000);
   document.querySelector("#shopagain").addEventListener("click", function () {
-    location.href = "./index.html";
+    location.href = "/Hand-Sanitizer/Hand_Sanitizer/index.html";
   });
 </script>
