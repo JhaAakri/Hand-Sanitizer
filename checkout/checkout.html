@@ -196,12 +196,11 @@
   //payment section
 
 
-    var sub_total = localStorage.getItem("Total_Amount");
-    var total = parseInt(sub_total);
-    console.log(total);
-    let pay_data = document.getElementById("convinientfee").innerText=100;
-    let total = document.getElementById("total").innerText=total;
-    let subtotal = document.getElementById("subtotal").innerText=total;
+    let totalAmount = localStorage.getItem("Total_Amount");
+    console.log(totalAmount);
+    let pay_data = document.getElementById("convinientfee").innerText=99;
+    let total = document.getElementById("total").innerText=totalAmount;
+    let subtotal = document.getElementById("subtotal").innerText=totalAmount;
 
   var options = {
     key: "rzp_test_y0dj0ip5NJmJJs", // Enter the Key ID generated from the Dashboard
@@ -292,7 +291,7 @@
       state: state,
     };
     try {
-      let response = await fetch(`https://successful-ruby-eel.cyclic.cloud/address/1`, {
+      let response = await fetch(`https://gifted-spacesuit-mite.cyclic.cloud/address/1`, {
         method: "PATCH",
         body: JSON.stringify(obj),
         headers: {
