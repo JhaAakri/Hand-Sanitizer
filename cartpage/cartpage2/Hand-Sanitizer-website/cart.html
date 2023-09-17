@@ -5,20 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cart page</title>
-    <script
-      src="https://kit.fontawesome.com/adb97210e8.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
     <link
       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
       rel="stylesheet"
     />
 
     <style>
+      * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
       /* Navbar starts here */
       * {
         padding: 0;
@@ -367,14 +364,15 @@
         font-size: 36px;
       }
 
-      .fa-regular.fa-user {
-        min-height: 70px;
-        padding-top: 30px;
-        margin-left: 29px;
-        border-right: 1px solid black;
-        padding-right: 50px;
-        margin-top: -10px;
-      }
+.fa-regular.fa-user {
+  min-height: 70px;
+  padding-top: 30px;
+  margin-left: 29px;
+  border-right: 1px solid black;
+  padding-right: 50px;
+  margin-top: -10px;
+}
+
     </style>
   </head>
 
@@ -475,6 +473,57 @@
 
       <div id="cart"></div>
     </div>
+    <!-- Footer part   -->
+
+    <footer class="footer">
+      <div class="footer-categories">
+          <div class="footer-parts">
+              <div class="footer-catalog">
+                  <h2>Catalog</h2>
+                  <p>Best Seller</p>
+                  <p>Hand Sanitizer</p>
+                  <p>Hand Cream</p>
+                  <p>Hand Soap</p>
+                  <p>Toothpaste</p>
+                  <p>Refills</p>
+                  <p>Combos</p>
+              </div>
+              <div class="customer-info">
+                  <h2>Customer Info</h2>
+                  <p>About us & our purpose</p>
+                  <p>Stocklist</p>
+                  <p>Journal</p>
+                  <p>FAQS</p>
+                  <p>Contact</p>
+                  <p>For Business</p>
+              </div>
+              <div class="legal-pages">
+                  <h2>Legal Pages</h2>
+                  <p>Deliveries & Returns</p>
+                  <p>Terms & Conditions</p>
+                  <p>Refund Policy</p>
+                  <p>Privacy Policy</p>
+              </div>
+          </div>
+          <div class="footer-right-part">
+              <h2 class="footer-right-part-header">Sign up for updates</h2>
+              <div class="signup">
+                  <input type="text" placeholder="Email address" />
+                  <button class="arrow-button">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+              </div>
+
+              <div class="social-media">
+                  <i class="fa-brands fa-instagram"></i>
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-youtube"></i>
+                  <i class="fa-brands fa-linkedin"></i>
+              </div>
+          </div>
+      </div>
+      <p class="footer-p">(C) 2023 All right reserved</p>
+  </footer>
   </body>
 </html>
 
