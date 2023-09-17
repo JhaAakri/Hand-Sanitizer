@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cart page</title>
+    <script src="https://kit.fontawesome.com/adb97210e8.js" crossorigin="anonymous"></script>
+
     <link
       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
       rel="stylesheet"
@@ -277,7 +279,7 @@
         height: 50px;
         border-style: none;
         position: absolute;
-        top: 55%;
+        top: 75%;
         right: 16%;
         color: white;
         cursor: pointer;
@@ -372,6 +374,76 @@
   padding-right: 50px;
   margin-top: -10px;
 }
+/* Footer part */
+.footer {
+  border-top: 1px solid black;
+  margin-top: 50px;
+  height: 390px;
+}
+
+.signup {
+  display: flex;
+  width: 250px;
+  margin-left: 180px;
+}
+
+.footer-right-part-header {
+  margin-left: 178px;
+  margin-bottom: 9px;
+}
+
+.signup input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.signup button {
+  padding: 10px 15px;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.signup button i {
+  font-size: 14px;
+}
+
+.social-media {
+  margin-left: 180px;
+  margin-top: 10px;
+}
+
+.social-media i {
+  margin-right: 12px;
+  font-size: 30px;
+}
+
+.footer-parts {
+  display: flex;
+  gap: 90px;
+  margin-left: 210px;
+  line-height: 25px;
+}
+
+.footer-parts h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.footer-categories {
+  display: flex;
+  gap: 20px;
+  margin-top: 59px;
+}
+
+.footer-p {
+  margin-top: 39px;
+  text-align: center;
+}
 
     </style>
   </head>
@@ -400,12 +472,12 @@
           <li class="nav-items">
             <a href="#" class="nav-links">Refills</a>
           </li>
-          <li class="nav-items">
+          <li class="nav-items"><a href="/Hand_Sanitizer/index.html">
             <img
               id="logo-image"
               src="https://cdn.shopify.com/s/files/1/0511/9066/1293/files/logo_han.png?v=1651046048"
               alt=""
-            />
+            /></a>
           </li>
           <li class="nav-items">
             <a href="#" class="nav-links">Toothpaste</a>
@@ -421,7 +493,7 @@
         <a class="nav-links logini" href="#"
           ><i class="fa-regular fa-user"></i
         ></a>
-        <a class="nav-links" href="#"
+        <a class="nav-links" href="/cartpage/cartpage2/Hand-Sanitizer-website/cart.html"
           ><i class="fa-solid fa-bag-shopping"></i
         ></a>
       </nav>
@@ -465,7 +537,7 @@
             Your order number is No <span id="order-number"></span>. You can
             track your order in your personal account or continue shopping.
           </p>
-          <a href="index.html"
+          <a href="/Hand_Sanitizer/index.html"
             ><button id="Continue">Continue Shopping</button></a
           >
         </div>
@@ -572,7 +644,7 @@
       "cart"
     ).innerHTML = `<h1 id="empty-cart"> cart is empty <h1> <button id="empty-shopping">Shopping</button>`;
     document.getElementById("empty-shopping").addEventListener("click", () => {
-      window.location.href = "index.html";
+      window.location.href = "/Hand_Sanitizer/index.html";
     });
   }
 

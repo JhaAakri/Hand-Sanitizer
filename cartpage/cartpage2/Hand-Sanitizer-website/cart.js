@@ -1,5 +1,5 @@
 document.querySelector(".checkout-button").addEventListener("click", () => {
-  location.href="/Hand-Sanitizer/checkout/checkout.html"
+  location.href="/checkout/checkout.html"
 });
 
 document.getElementById("next").addEventListener("click",()=>{
@@ -79,6 +79,5 @@ if(name.length == 0 || last.length ==0 || num.length != 10){
 document.getElementById("Continue").addEventListener("click", () => {
   localStorage.removeItem("cartitem");
 });
-
 
 
