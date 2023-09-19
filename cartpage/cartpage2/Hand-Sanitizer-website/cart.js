@@ -6,7 +6,6 @@ document.getElementById("next").addEventListener("click",()=>{
 
 })
 
-
 document.getElementById("next").addEventListener("click", () => {
 
   let name  = document.getElementById("username").value
