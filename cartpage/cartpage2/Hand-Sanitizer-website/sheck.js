@@ -33,7 +33,7 @@ let trendingItem = [
   {
     id: 15,
     image:
-      "https://cdn.shopify.com/s/files/1/0511/9066/1293/products/DD_20047624-d90f-41e7-b35f-df66d9a0ebaa.jpg?v=1651510908",
+      "https://cdn.shopify.com/s/files/1/0601/3275/3663/products/DD_1024x1024_2x_4655cd2f-b0fa-49ce-a055-a1a066d09961_250x250@2x.jpg?v=1637209490",
     name: "Hand Sanitizer Dew of Dawn",
     price: 1069,
   },
@@ -92,7 +92,7 @@ let santData = [
   {
     id: 1,
     image:
-      "https://cdn.shopify.com/s/files/1/0511/9066/1293/products/Pack3_SA_MF.jpg?v=1678874635",
+      "https://cdn.shopify.com/s/files/1/0511/9066/1293/products/077_300x300.jpg?v=1681380477",
     name: "3 Hand Sanitizers Mystic Foliage",
     price: 1590,
   },
@@ -121,28 +121,27 @@ let santData = [
   {
     id: 5,
     image:
-      "https://cdn.shopify.com/s/files/1/0511/9066/1293/products/064_f02a0b61-cc0d-4e6d-994a-9fa368f647d8.jpg?v=1651510078",
+      "https://haanready.com/cdn/shop/products/064_f02a0b61-cc0d-4e6d-994a-9fa368f647d8_450x.jpg?v=1651510078",
     name: "Hydrating Hand Sanitizer - Blossom Elixir 5 Pack",
     price: 1170,
   },
   {
     id: 6,
-    image:
-      "https://cdn.shopify.com/s/files/1/0511/9066/1293/products/062_736773a1-2164-4170-9ef2-925154e35d00.jpg?v=1651509382",
+    image:"https://cdn.shopify.com/s/files/1/0511/9066/1293/products/062_736773a1-2164-4170-9ef2-925154e35d00_300x300.jpg?v=1681379756",
     name: "Hydrating Hand Sanitizer - Daily Moods 5 Pack",
     price: 1670,
   },
   {
     id: 7,
     image:
-      "https://cdn.shopify.com/s/files/1/0511/9066/1293/products/CN_50b43280-f266-4dc9-9f27-00d2ce9d183e.jpg?v=1651510905",
+      "https://haanreadyth.com/cdn/shop/products/citrusnoon_1200x1200.jpg?v=1637146108",
     name: "Hand Sanitizer Citrus Noon",
     price: 190,
   },
   {
     id: 8,
     image:
-      "https://cdn.shopify.com/s/files/1/0511/9066/1293/products/manhattan_1fb47322-02d9-47ee-b4d5-22c5253f93d4.jpg?v=1651510921",
+      "https://haanreadyth.com/cdn/shop/products/manhattan_1024x1024_2x_30dcea09-2d64-4887-a044-5fb07f939def_1200x1200.jpg?v=1637662374",
     name: "Hand Sanitizer Manhattan Glacé",
     price: 198,
   },
@@ -163,14 +162,14 @@ let santData = [
   {
     id: 11,
     image:
-      "https://cdn.shopify.com/s/files/1/0511/9066/1293/products/MG_d9ae8cda-5e84-40c8-9f4d-4ab6da7e3efc.jpg?v=1651510911",
+      "https://haanready.com/cdn/shop/files/sanitizer_bottle_MorningGlory_grey-background_7da13cdd-a8a8-475b-ab72-a23228c3e257_grande.jpg?v=1693478469",
     name: "Hand Sanitizer Morning Glory",
     price: 1170,
   },
   {
     id: 12,
     image:
-      "https://cdn.shopify.com/s/files/1/0511/9066/1293/products/SPICY_da1f74d2-832f-4c08-8d3d-a60b048f8b78.jpg?v=1651510930",
+      "https://haanready.com/cdn/shop/files/sanitizer_bottle_GingerAle_grey-background_70f1d444-f108-44b5-91a1-e192c3189bb7_grande.jpg?v=1693478321",
     name: "Hand Sanitizer Spicy Ginger Ale",
     price: 1670,
   },
@@ -226,7 +225,7 @@ function santDisplay(santData) {
     document.getElementById("container").append(card);
     card.addEventListener("click", () => {
       if(elm.id ==1){
-        window.location.href = "productpage.html"
+        window.location.href = "#"
       }
     });
   });

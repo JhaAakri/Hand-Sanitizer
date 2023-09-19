@@ -1,16 +1,10 @@
 document.querySelector(".checkout-button").addEventListener("click", () => {
-  document.getElementById("first").classList.add("first-none");
-  document.querySelector(".second").classList.remove("second1");
-  document.getElementById("shiping-input").classList.add("shipping-none");
-  document.getElementById("payment-method").classList.add("payment-none");
-  document.querySelector(".last-page").classList.add("last-page-none");
-  document.getElementById("inputs").style.display = "block";
+  location.href="/checkout/checkout.html"
 });
 
 document.getElementById("next").addEventListener("click",()=>{
 
 })
-
 
 document.getElementById("next").addEventListener("click", () => {
 
@@ -82,8 +76,5 @@ if(name.length == 0 || last.length ==0 || num.length != 10){
 });
 
 document.getElementById("Continue").addEventListener("click", () => {
-  localStorage.removeItem("cartitem");
+  localStorage.removeItem("productArr");
 });
-
-
-

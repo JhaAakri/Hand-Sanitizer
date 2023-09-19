@@ -5,13 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cart page</title>
+    <script src="https://kit.fontawesome.com/adb97210e8.js" crossorigin="anonymous"></script>
+
     <link
       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
       rel="stylesheet"
     />
 
     <style>
+      * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
       /* Navbar starts here */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
       body {
         font-family: "Open Sans", sans-serif;
         margin: 0;
@@ -100,6 +112,10 @@
         background: transparent;
         background-color: rgb(245, 108, 69);
         color: white;
+      }
+
+      .checkout-button:hover{
+        transform: scale(1.07);
       }
 
       #first {
@@ -256,18 +272,18 @@
         border: 1px solid grey;
       }
 
-      #empty-cart{
+      #empty-cart {
         padding: 210px;
         font-size: 40px;
         color: red;
       }
 
-      #empty-shopping{
+      #empty-shopping {
         width: 25%;
         height: 50px;
         border-style: none;
         position: absolute;
-        top: 55%;
+        top: 75%;
         right: 16%;
         color: white;
         cursor: pointer;
@@ -276,10 +292,216 @@
         border-radius: 12px;
         font-size: 20px;
       }
+
+      .header {
+        background-color: white;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+
+      .navbar {
+        min-height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+        border-bottom: 1px solid black;
+        font-size: 16px;
+      }
+
+      .nav-menu {
+        display: flex;
+        min-height: 70px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 45px;
+        margin-left: 30px;
+      }
+
+      .nav-items {
+        min-height: 70px;
+        border-right: 1px solid black;
+        padding-top: 30px;
+        margin-left: -15px;
+      }
+
+      .nav-links {
+        transition: 0.7s ease;
+        padding-right: 25px;
+      }
+
+      .nav-links:hover {
+        color: dodgerblue;
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        background-color: black;
+      }
+
+      #logo-image {
+        height: 27px;
+        margin-right: 36px;
+        margin-top: -8px;
+      }
+
+      .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: white;
+      }
+
+      .fa-solid.fa-bars {
+        font-size: 36px;
+      }
+
+.fa-regular.fa-user {
+  min-height: 70px;
+  padding-top: 30px;
+  margin-left: 29px;
+  border-right: 1px solid black;
+  padding-right: 50px;
+  margin-top: -10px;
+}
+/* Footer part */
+.footer {
+  border-top: 1px solid black;
+  margin-top: 50px;
+  height: 390px;
+}
+
+.signup {
+  display: flex;
+  width: 250px;
+  margin-left: 180px;
+}
+
+.footer-right-part-header {
+  margin-left: 178px;
+  margin-bottom: 9px;
+}
+
+.signup input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.signup button {
+  padding: 10px 15px;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.signup button i {
+  font-size: 14px;
+}
+
+.social-media {
+  margin-left: 180px;
+  margin-top: 10px;
+}
+
+.social-media i {
+  margin-right: 12px;
+  font-size: 30px;
+}
+
+.footer-parts {
+  display: flex;
+  gap: 90px;
+  margin-left: 210px;
+  line-height: 25px;
+}
+
+.footer-parts h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.footer-categories {
+  display: flex;
+  gap: 20px;
+  margin-top: 59px;
+}
+
+.footer-p {
+  margin-top: 39px;
+  text-align: center;
+}
+
     </style>
   </head>
 
   <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-items">
+            <a href="#" class="nav-links"><i class="fa-solid fa-bars"></i></a>
+          </li>
+          <li class="nav-items">
+            <a href="/cartpage/cartpage2/Hand-Sanitizer-website/shack.html" class="nav-links">Best Sellers</a>
+          </li>
+          <li class="nav-items">
+            <a href="/cartpage/cartpage2/Hand-Sanitizer-website/shack.html" class="nav-links">Hand Sanitizer</a>
+          </li>
+          <li class="nav-items">
+            <a href="/cartpage/cartpage2/Hand-Sanitizer-website/shack.html" class="nav-links">Hand Cream</a>
+          </li>
+          <li class="nav-items">
+            <a href="/cartpage/cartpage2/Hand-Sanitizer-website/shack.html" class="nav-links">Refills</a>
+          </li>
+          <li class="nav-items"><a href="/Hand_Sanitizer/index.html">
+            <img
+              id="logo-image"
+              src="https://cdn.shopify.com/s/files/1/0511/9066/1293/files/logo_han.png?v=1651046048"
+              alt=""
+            /></a>
+          </li>
+          <li class="nav-items">
+            <a href="/cartpage/cartpage2/Hand-Sanitizer-website/shack.html" class="nav-links">Toothpaste</a>
+          </li>
+          <li class="nav-items">
+            <a href="/cartpage/cartpage2/Hand-Sanitizer-website/shack.html" class="nav-links">Hand Soap</a>
+          </li>
+          <li class="nav-items">
+            <a href="/cartpage/cartpage2/Hand-Sanitizer-website/shack.html" class="nav-links">Combos</a>
+          </li>
+        </ul>
+
+        <a class="nav-links logini" href="#"
+          ><i class="fa-regular fa-user"></i
+        ></a>
+        <a class="nav-links" href="/cartpage/cartpage2/Hand-Sanitizer-website/cart.html"
+          ><i class="fa-solid fa-bag-shopping"></i
+        ></a>
+      </nav>
+    </header>
     <div id="container">
       <div id="checkout">
         <div id="first">
@@ -303,9 +525,9 @@
             </div>
 
             <!-- shippping -->
-            
+
             <!-- paymant -->
-            
+            <a href=""></a>
 
             <div id="bottum">
               <p id="back"><span id="arrow">⇠</span> Back</p>
@@ -319,7 +541,7 @@
             Your order number is No <span id="order-number"></span>. You can
             track your order in your personal account or continue shopping.
           </p>
-          <a href="index.html"
+          <a href="/Hand_Sanitizer/index.html"
             ><button id="Continue">Continue Shopping</button></a
           >
         </div>
@@ -327,6 +549,57 @@
 
       <div id="cart"></div>
     </div>
+    <!-- Footer part   -->
+
+    <footer class="footer">
+      <div class="footer-categories">
+          <div class="footer-parts">
+              <div class="footer-catalog">
+                  <h2>Catalog</h2>
+                  <p>Best Seller</p>
+                  <p>Hand Sanitizer</p>
+                  <p>Hand Cream</p>
+                  <p>Hand Soap</p>
+                  <p>Toothpaste</p>
+                  <p>Refills</p>
+                  <p>Combos</p>
+              </div>
+              <div class="customer-info">
+                  <h2>Customer Info</h2>
+                  <p>About us & our purpose</p>
+                  <p>Stocklist</p>
+                  <p>Journal</p>
+                  <p>FAQS</p>
+                  <p>Contact</p>
+                  <p>For Business</p>
+              </div>
+              <div class="legal-pages">
+                  <h2>Legal Pages</h2>
+                  <p>Deliveries & Returns</p>
+                  <p>Terms & Conditions</p>
+                  <p>Refund Policy</p>
+                  <p>Privacy Policy</p>
+              </div>
+          </div>
+          <div class="footer-right-part">
+              <h2 class="footer-right-part-header">Sign up for updates</h2>
+              <div class="signup">
+                  <input type="text" placeholder="Email address" />
+                  <button class="arrow-button">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+              </div>
+
+              <div class="social-media">
+                  <i class="fa-brands fa-instagram"></i>
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-youtube"></i>
+                  <i class="fa-brands fa-linkedin"></i>
+              </div>
+          </div>
+      </div>
+      <p class="footer-p">(C) 2023 All right reserved</p>
+  </footer>
   </body>
 </html>
 
@@ -365,18 +638,20 @@
 
   // ]
 
-  let cartItem = JSON.parse(localStorage.getItem("cartitem")) || [];
+  let cartItem = JSON.parse(localStorage.getItem("productArr")) || [];
 
   if (cartItem.length > 1) {
     displayitem();
     displaytotal();
   } else {
-    document.getElementById("cart").innerHTML = `<h1 id="empty-cart"> cart is empty <h1> <button id="empty-shopping">Shopping</button>` ;
-      document.getElementById("empty-shopping").addEventListener("click", ()=>{
-     window.location.href="index.html"
-  })
+    document.getElementById(
+      "cart"
+    ).innerHTML = `<h1 id="empty-cart"> cart is empty <h1> <button id="empty-shopping">Shopping</button>`;
+    document.getElementById("empty-shopping").addEventListener("click", () => {
+      window.location.href = "/Hand_Sanitizer/index.html";
+    });
   }
-  
+
   function displayitem() {
     document.getElementById("cart").innerHTML = "";
 
@@ -394,7 +669,7 @@
       detail_div.setAttribute("class", "details");
       let namediv = document.createElement("div");
       let name = document.createElement("p");
-      name.textContent = elm.name;
+      name.textContent = elm.title;
       namediv.append(name);
 
       let pricediv = document.createElement("div");
@@ -409,7 +684,7 @@
       remove.style.cursor = "pointer";
       remove.addEventListener("click", () => {
         cartItem.splice(index, 1);
-        localStorage.setItem("cartitem", JSON.stringify(cartItem));
+        localStorage.setItem("productArr", JSON.stringify(cartItem));
         displayitem();
         displaytotal();
       });
@@ -435,6 +710,7 @@
     console.log(toatalprice);
     total.textContent = "Total " + "Rs." + Number(toatalprice);
     div2.append(total);
+    localStorage.setItem('Total_Amount',toatalprice)
     let deta = document.createElement("div");
     deta.setAttribute("id", "total-after");
     deta.append(div1, div2);
@@ -446,7 +722,7 @@
 
   function findtotal() {
     let result = cartItem.reduce(function (ac, b) {
-      return ac + b.price;
+      return ac + +b.price;
     }, 0);
     return result;
   }
