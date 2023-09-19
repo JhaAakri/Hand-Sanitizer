@@ -114,6 +114,10 @@
         color: white;
       }
 
+      .checkout-button:hover{
+        transform: scale(1.07);
+      }
+
       #first {
         /* padding: 150px; */
         font-size: 20px;
@@ -634,7 +638,7 @@
 
   // ]
 
-  let cartItem = JSON.parse(localStorage.getItem("cartitem")) || [];
+  let cartItem = JSON.parse(localStorage.getItem("productArr")) || [];
 
   if (cartItem.length > 1) {
     displayitem();
@@ -665,7 +669,7 @@
       detail_div.setAttribute("class", "details");
       let namediv = document.createElement("div");
       let name = document.createElement("p");
-      name.textContent = elm.name;
+      name.textContent = elm.title;
       namediv.append(name);
 
       let pricediv = document.createElement("div");
@@ -680,7 +684,7 @@
       remove.style.cursor = "pointer";
       remove.addEventListener("click", () => {
         cartItem.splice(index, 1);
-        localStorage.setItem("cartitem", JSON.stringify(cartItem));
+        localStorage.setItem("productArr", JSON.stringify(cartItem));
         displayitem();
         displaytotal();
       });
@@ -718,7 +722,7 @@
 
   function findtotal() {
     let result = cartItem.reduce(function (ac, b) {
-      return ac + b.price;
+      return ac + +b.price;
     }, 0);
     return result;
   }
