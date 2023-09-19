@@ -56,7 +56,7 @@
       <div id="part3">
         <div>
           <h1>Get 30% off your next order.</h1>
-          <button id="shopagain"><a href="index.html"><h2>Shop Again</h2></a></button>
+          <button id="shopagain"><a href="/index.html"><h2>Shop Again</h2></a></button>
         </div>
       </div>
     </div>
@@ -90,11 +90,11 @@
     document.querySelector("#timer").innerText = `Redirecting in ${count} sec`;
     count--;
     if (count < 0) {
-      location.href = "/Hand_Sanitizer/index.html";
+      location.href = "/index.html";
       clearInterval(interval);
     }
   }, 1000);
   document.querySelector("#shopagain").addEventListener("click", function () {
-    location.href = "Hand_Sanitizer/index.html";
+    location.href = "/index.html";
   });
 </script>

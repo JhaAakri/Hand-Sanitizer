@@ -2,6 +2,9 @@
 
 In this project we have tried to make a look alike of given template of Hand Sanitizer website. With our efforts and the technology stack, that we have learned till now in Unit-5 in Masai School.
 
+<h2>Deploy Link</h2>
+https://haan-handsanitizer.netlify.app
+
 <h1>Run Locally</h1>
 Clone the project
 https://github.com/JhaAakri/Hand-Sanitizer.git
