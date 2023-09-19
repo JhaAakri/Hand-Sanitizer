@@ -16,7 +16,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     const existingUser = storedUsers.find(user => user.username === username && user.password === password);
     if (existingUser) {
       // Redirect to the home page or perform any other action
-      window.location.href = '/Hand_Sanitizer/index.html';
+      window.location.href = '/index.html';
     } else {
       alert('Invalid username or password.');
     }
